@@ -36,10 +36,11 @@ let questionValues = [100, 200, 300, 400, 500];
  */
 function renderQuestions() {
   let i;
+  let c;
   for (i = 0; i < numCategories; i++) {
-    for (i = 0; i < questionValues.length; i++) {
+    for (c = 0; c < questionValues.length; c++) {
       $("#questions").append(
-        `<div class='question-column'><div class='question-title' data-category=${i}>${questionValues[i]}</div></div>`
+        `<div class='question-column'><div class='question-title' data-category=${c}>${questionValues[c]}</div></div>`
       );
     }
   }
