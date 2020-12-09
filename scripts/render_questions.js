@@ -37,11 +37,18 @@ let questionValues = [100, 200, 300, 400, 500];
 function renderQuestions() {
   let i;
   let c;
+  let questionCells = [];
   for (i = 0; i < numCategories; i++) {
+    // creating a new category column
     for (c = 0; c < questionValues.length; c++) {
-      $("#questions").append(
-        `<div class='question-column'><div class='question-cell' data-category=${c}>${questionValues[c]}</div></div>`
+      // creating all of the cells for this category
+      questionCells.push(
+        `<div class='question-cell' data-category=${i}>${questionValues[c]}</div>`
       );
     }
+    // adding my new category column to the HTML
+    $("#questions").append(
+      `<div class='questions-column'>${questionCells.join("")}</div>`
+    );
   }
 }
