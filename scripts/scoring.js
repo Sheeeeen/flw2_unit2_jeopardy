@@ -23,6 +23,10 @@ function renderScoringButtons() {
   $("#incorrect-button").click(function () {
     subtractFromScore();
   });
+  $("#question-modal-show-answer").click(function () {
+    $("#question-modal-actions").hide();
+    $("#scoring-actions").show();
+  });
 }
 
 /* TODO: Program the following:
