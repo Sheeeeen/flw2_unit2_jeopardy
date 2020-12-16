@@ -65,7 +65,7 @@ function questionOnClick(categoryIndex, moneyValue) {
     .show();
 
   $("#question-modal-close").click(() => {
-    answerOnClick(categoryIndex, moneyValue);
+    hideQuestionPopup();
   });
   $("#question-modal").modal("show");
 }
